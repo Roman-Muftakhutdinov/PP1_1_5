@@ -1,14 +1,6 @@
 package jm.task.core.jdbc;
-
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
-import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
-import jm.task.core.jdbc.util.Util;
-
-import java.sql.*;
-
 public class Main {
-
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
         UserServiceImpl userService = new UserServiceImpl();
@@ -23,13 +15,10 @@ public class Main {
 
         userService.getAllUsers();
 
-        //userService.removeUserById((int) 3);
-        //userService.getAllUsers();
         userService.cleanUsersTable();
-        //userService.getAllUsers();
+        System.out.println("table is clean");
         userService.dropUsersTable();
         System.out.println("table is drop");
-
 
     }
 }

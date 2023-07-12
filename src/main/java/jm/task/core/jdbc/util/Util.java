@@ -17,7 +17,6 @@ public class Util {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public Connection getConnection() {
