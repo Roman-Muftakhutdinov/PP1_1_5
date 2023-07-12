@@ -7,6 +7,7 @@ public class Main {
 
         userService.createUsersTable();
         System.out.println("table is create");
+        userService.removeUserById(2);
 
         userService.saveUser("Anthony", "Kiedis", (byte) 60);
         userService.saveUser("Michael Peter", "Balzary", (byte) 60);
