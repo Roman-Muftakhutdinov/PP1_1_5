@@ -2,21 +2,17 @@ package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import org.hibernate.Query;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
 
     private int i = 0;
-    public UserDaoHibernateImpl() {
+    public UserDaoHibernateImpl() {    }
 
-    }
     @Override
     public void createUsersTable() {
         String createTable = "create table if not exists Users (" +
