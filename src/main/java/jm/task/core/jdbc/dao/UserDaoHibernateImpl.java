@@ -10,7 +10,6 @@ import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
 
-    private int i = 0;
     public UserDaoHibernateImpl() {    }
 
     @Override
@@ -55,7 +54,6 @@ public class UserDaoHibernateImpl implements UserDao {
     public void saveUser(String name, String lastName, byte age) {
         Transaction transaction = null;
         User user = new User(name, lastName, age);
-        user.setId((long) ++i);
         try (Session session = Util.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
             session.save(user);
